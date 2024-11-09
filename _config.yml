@@ -3,7 +3,8 @@ subtitle: ''
 description: ''
 keywords: null
 author: Zine Yu
-language: zh-cn
+language:
+  - zh-cn
 timezone: Asia/Shanghai
 url: http://example.com
 permalink: ':year/:month/:day/:title/'
