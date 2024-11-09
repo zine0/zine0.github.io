@@ -298,7 +298,7 @@ widgets:
         # Whether to show tags count, i.e. number of posts in the tag.
         show_count: true
     # Google FeedBurner email subscription widget configurations
-    -
+    # -
         # Where should the widget be placed, left sidebar or right sidebar
         # position: left
         # type: subscribe_email
@@ -316,7 +316,7 @@ widgets:
         # AdSense AD unit ID
         slot_id: ''
     # Follow.it email subscription widget configurations
-    -
+    # -
         # Where should the widget be placed, left sidebar or right sidebar
         # position: left
         # type: followit
