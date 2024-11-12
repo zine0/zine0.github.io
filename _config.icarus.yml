@@ -161,14 +161,14 @@ article:
 search:
     type: insight
     # Whether to include pages in the search results
-    index_pages: true
+    include_pages: true
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
-comment:
-    type: changyan
-    # Disqus shortname
-    app_id: cyxAEUmMN
-    conf: prod_cd4ff1c8312fa50e0a711813e32aaa11
+# comment:
+#     type: changyan
+#     # Disqus shortname
+#     app_id: cyxAEUmMN
+#     conf: prod_cd4ff1c8312fa50e0a711813e32aaa11
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 # donates:
@@ -242,15 +242,12 @@ widgets:
         # Email address for the Gravatar
         gravatar: 
         # URL or path for the follow button
-        follow_link: https://github.com/ppoffice
+        follow_link: https://github.com/zine0
         # Links to be shown on the bottom of the profile widget
         social_links:
             Github:
                 icon: fab fa-github
                 url: https://github.com/zine0
-            RSS:
-                icon: fas fa-rss
-                url: /
     # Table of contents widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -307,14 +304,14 @@ widgets:
         # # Feedburner ID
         # feedburner_id: ''
     # Google AdSense unit configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: adsense
-        # AdSense client ID
-        client_id: 'ca-pub-4592828247677645'
-        # AdSense AD unit ID
-        slot_id: '5378208005'
+    # -
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     position: left
+    #     type: adsense
+    #     # AdSense client ID
+    #     client_id: 'ca-pub-4592828247677645'
+    #     # AdSense AD unit ID
+    #     slot_id: '5378208005'
     # Follow.it email subscription widget configurations
     # -
         # Where should the widget be placed, left sidebar or right sidebar

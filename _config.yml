@@ -1,11 +1,11 @@
 title: zine's blog
-subtitle: ''
+subtitle: https://v1.hitokoto.cn/?encode=text
 description: ''
 keywords: null
 author: Zine Yu
 language: zh-CN
 timezone: Asia/Shanghai
-url: http://example.com
+url: https://zine0.github.io
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 pretty_urls:
