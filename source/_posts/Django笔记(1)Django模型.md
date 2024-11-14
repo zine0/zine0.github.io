@@ -1,18 +1,17 @@
 ---
-title:  Django模型详解
-date: 2024-11-10
-toc: true
-tags:
-    - Django
-    - 笔记
-    - Python
+abbrlink: ''
 categories:
-    - [Django 笔记 Python]
+- - Django 笔记 Python
+date: '2024-11-10'
+tags:
+- Django
+- 笔记
+- Python
+title: Django模型详解
+toc: true
+updated: '2024-11-14T20:22:22.170+08:00'
 ---
-
-[TOC]
-
-## 模型的字段
+# 模型的字段
 
 ### 基础字段
 
@@ -22,7 +21,7 @@ categories:
 
 - 如不是必填项，可设置blank = True和default = ‘‘
 - 如果想使其唯一，可以设置`unique = True`
-- 如果有choice选项，可以设置 choices = XXX_CHOICES  
+- 如果有choice选项，可以设置 choices = XXX_CHOICES
 
 **TextField**
 
@@ -33,9 +32,7 @@ categories:
 可通过default=xx选项设置默认日期和时间。
 
 - 对于DateTimeField: default=timezone.now - 先要`from django.utils import timezone`
-
 - 如果希望自动记录一次修改日期(modified)，可以设置: `auto_now=True`
-
 - 如果希望自动记录创建日期(created),可以设置`auto_now_add=True`
 
 **EmailField() **
@@ -105,7 +102,7 @@ class Membership(models.Model):
 
 对于`OneToOneField`和`ForeignKey`, `on_delete`选项和`related_name`是两个非常重要的设置，前者决定了了关联外键删除方式，后者决定了模型反向查询的名字。
 
-###   on_delete删除选项
+### on_delete删除选项
 
 Django提供了如下几种关联外键删除选项, 可以根据实际需求使用。
 
@@ -116,7 +113,7 @@ Django提供了如下几种关联外键删除选项, 可以根据实际需求使
 - `SET()`: 自定义一个值。
 - `DO_NOTHING`：什么也不做。删除不报任何错，外键值依然保留，但是无法用这个外键去做查询。
 
-###   related_name选项
+### related_name选项
 
 `related_name`用于设置模型反向查询的名字，非常有用。在文初的`Publisher`和`Book`模型里，我们可以通过`book.publisher`获取每本书的出版商信息，这是因为`Book`模型里有`publisher`这个字段。但是`Publisher`模型里并没有`book`这个字段，那么我们如何通过出版商反查其出版的所有书籍信息呢？
 
@@ -150,26 +147,17 @@ class Book(models.Model):
 ## 模型的META选项
 
 - `abstract=True`: 指定该模型为抽象模型
-
 - `proxy=True`: 指定该模型为代理模型
-
 - `verbose_name=xxx`和`verbose_name_plural=xxx`: 为模型设置便于人类阅读的别名
-
 - `db_table= xxx`: 自定义数据表名
-
 - `odering=['-pub-date']`: 自定义按哪个字段排序，`-`代表逆序
-
 - `permissions=[]`: 为模型自定义权限
-
 - `managed=False`: 默认为True，如果为False，Django不会为这个模型生成数据表
-
 - `indexes=[]`: 为数据表设置索引，对于频繁查询的字段，建议设置索引
-
 - `constraints=`: 给数据库中的数据表增加约束。
-
 - 除此以外，我们经常自定义方法或Manager方法
 
-###   示例一：自定义方法
+### 示例一：自定义方法
 
 ~~~python
 ```
@@ -184,7 +172,7 @@ def viewed(self):
 ```
 ~~~
 
-###   示例二：自定义Manager方法
+### 示例二：自定义Manager方法
 
 ~~~python
 ```
