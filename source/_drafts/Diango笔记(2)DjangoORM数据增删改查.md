@@ -9,7 +9,7 @@ tags:
 - Python
 title: Django ORM数据增删改查接口
 toc: true
-updated: '2024-11-14T20:20:41.715+08:00'
+updated: '2024-11-14T20:21:31.908+08:00'
 ---
 我们用到的Article模型如下所示：
 
